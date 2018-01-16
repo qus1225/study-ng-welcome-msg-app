@@ -26,7 +26,7 @@ export class WelcomeMsgComponent implements AfterViewInit {
     this.valid = this.userName.length > 0;
   }
   showWelcomeMsg() {
-    this.welcomeMsg = this.i18nSupporter.getWelcomeMsgByCode(this.userName);
+    this.welcomeMsg = this.i18nSupporter.getWelcomeMsg(this.userName);
   }
 
 }
