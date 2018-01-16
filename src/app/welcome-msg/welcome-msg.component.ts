@@ -17,11 +17,9 @@ export class WelcomeMsgComponent implements AfterViewInit {
     };
     setTimeout(checkTouchedFn, WelcomeMsgComponent.CHK_KEYUP_WAIT_SECOND);
   }
-  onKeyUp(name) {
-    this.valid = name.length > 0;
-  }
-  setName(name) {
-    this.userName = name;
+
+  onChange() {
+    this.valid = this.userName.length > 0;
   }
 
 }

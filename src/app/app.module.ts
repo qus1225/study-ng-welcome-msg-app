@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { COMPOSITION_BUFFER_MODE } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -14,9 +16,10 @@ import { LangSelectorComponent } from './lang-selector/lang-selector.component';
     LangSelectorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [{provide: COMPOSITION_BUFFER_MODE, useValue: false}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
